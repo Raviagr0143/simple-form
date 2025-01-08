@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Forms</title>
+
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        background-color: rgba(82, 3, 230, 0.54);
+        background: linear-gradient(
+          to right bottom,
+          rgba(82, 3, 230, 0.54),
+          rgba(20, 20, 116, 0.6)
+        );
+      }
+
+      form {
+        background-color: #d1d7d6;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      form h1 {
+        margin: 20px 20%;
+        color: rgb(106, 84, 138);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="file"] {
+        border-radius: 10px;
+        padding: 5px 10px;
+        border: none;
+        margin: 0px 10px;
+      }
+
+      .btngroup {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: rgb(137, 59, 182);
+        color: white;
+        border: none;
+      }
+
+      textarea {
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px 30px;
+      }
+
+      label {
+        font-weight: bold;
+        color: rgb(17, 17, 47);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://formspree.io/f/xjkkplwb" method="POST">
+      <h1>Registration Form</h1>
+      <!-- type = text  -->
+      <label for="fname">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="First Name"
+      /><br /><br />
+
+      <label for="lname">Last name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Last Name"
+      /><br /><br />
+
+      <!-- type = password  -->
+      <label for="pass">Password:</label>
+      <input
+        type="password"
+        name="pass"
+        id="pass"
+        placeholder="password"
+      /><br /><br />
+
+      <!-- type = tel -->
+      <label for="Contact">Contact no:</label>
+      <input
+        type="tel"
+        name="Contact"
+        id="Contact"
+        placeholder="contact"
+      /><br /><br />
+
+      <!-- type = date  -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" name="dob" id="dob" /><br /><br />
+
+      <!-- type = image -->
+      <label for="img">Image:</label>
+      <input type="file" id="img" /><br /><br />
+
+      <!-- type = radio  -->
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" id="gender" value="male" /> Male
+      <input type="radio" name="gender" id="gender" value="female" />
+      Female
+      <input type="radio" name="gender" id="gender" value="Others" />
+      Others<br /><br />
+
+      <!-- type = checkbox  -->
+      <label for="lang">Programming languages:</label>
+      <input type="checkbox" name="lang" id="lang" value="Python" />
+      Python
+      <input type="checkbox" name="lang" id="lang" value="Java" /> Java
+      <input type="checkbox" name="lang" id="lang" value="C++" /> C++
+      <input type="checkbox" name="lang" id="lang" value="JavaScript" />
+      JavaScript<br /><br />
+
+      <!-- type = color  -->
+      <label for="color">Your favourite color:</label>
+      <input type="color" name="color" id="color" /><br /><br />
+
+      <!-- textarea  -->
+      <label for="feedback">Give your feedback : </label> <br />
+      <textarea
+        name="feedback"
+        id="feedback"
+        placeholder="your feedback"
+      ></textarea>
+
+      <div class="btngroup">
+        <!-- type = submit  -->
+        <input type="submit" value="Submit" class="btn" /><br />
+
+        <!-- type = reset  -->
+        <input type="reset" value="Reset" class="btn" /><br /><br />
+      </div>
+    </form>
+  </body>
+</html>
